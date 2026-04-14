@@ -32,29 +32,68 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ENV_PATH = os.path.join(BASE_DIR, ".env")
 load_dotenv(dotenv_path=ENV_PATH)
 
-# 从环境变量读取配置：
-# - GOOGLE_API_KEY：必填
-# - GOOGLE_MODEL：可选（默认 gemini-2.5-flash）
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
-GOOGLE_MODEL = os.getenv("GOOGLE_MODEL", "gemini-2.5-flash")
+def _init_llm():
+    """
+    初始化 LLM，优先级：
+    1) OpenAI-compatible（OPENAI_API_KEY + OPENAI_MODEL）
+    2) Gemini（GOOGLE_API_KEY）
+    """
+    # ---------- OpenAI-compatible ----------
+    openai_api_key = os.getenv("OPENAI_API_KEY")
+    openai_model = os.getenv("OPENAI_MODEL")
+    openai_base_url = os.getenv("OPENAI_BASE_URL")
+    openai_temperature = float(os.getenv("OPENAI_TEMPERATURE", "0"))
 
-# 若未配置 API Key，提前给出清晰错误信息。
-if not GOOGLE_API_KEY:
-    print(
-        "Error: GOOGLE_API_KEY is missing. "
-        "Please create routing_2/.env and set GOOGLE_API_KEY."
+    if openai_api_key and openai_model:
+        try:
+            # 延迟导入，避免未安装 langchain-openai 时在模块导入阶段直接崩溃。
+            from langchain_openai import ChatOpenAI
+        except ImportError:
+            return (
+                None,
+                "OpenAI-compatible configuration detected, but `langchain-openai` is not installed. "
+                "Install it with: pip install langchain-openai",
+            )
+
+        kwargs = {
+            "model": openai_model,
+            "temperature": openai_temperature,
+            "api_key": openai_api_key,
+        }
+        if openai_base_url:
+            kwargs["base_url"] = openai_base_url
+
+        llm = ChatOpenAI(**kwargs)
+        return llm, f"Using OpenAI-compatible backend: {openai_model}"
+
+    # ---------- Gemini ----------
+    google_api_key = os.getenv("GOOGLE_API_KEY")
+    google_model = os.getenv("GOOGLE_MODEL", "gemini-2.5-flash")
+    if google_api_key:
+        llm = ChatGoogleGenerativeAI(model=google_model, temperature=0)
+        return llm, f"Using Gemini backend: {google_model}"
+
+    return (
+        None,
+        "No valid model credentials found. "
+        "Set OPENAI_API_KEY+OPENAI_MODEL (optionally OPENAI_BASE_URL), "
+        "or set GOOGLE_API_KEY in routing_2/.env.",
     )
 
+
 llm = None
-if GOOGLE_API_KEY:
-    try:
-        # 这里使用 Gemini 2.5 Flash，temperature=0 让输出更稳定、便于路由判断。
-        llm = ChatGoogleGenerativeAI(model=GOOGLE_MODEL, temperature=0)
-        print(f"Language model initialized: {llm.model}")
-    except Exception as e:
-        # 初始化失败时不直接抛出异常，保留可读提示并在 main() 中安全退出。
-        print(f"Error initializing language model: {e}")
-        llm = None
+llm_status = ""
+try:
+    llm, llm_status = _init_llm()
+    if llm:
+        # 对 ChatOpenAI / ChatGoogleGenerativeAI 统一输出后端状态，便于排查配置来源。
+        print(f"Language model initialized. {llm_status}")
+    else:
+        print(f"Error initializing language model: {llm_status}")
+except Exception as e:
+    # 初始化失败时不直接抛出异常，保留可读提示并在 main() 中安全退出。
+    print(f"Error initializing language model: {e}")
+    llm = None
 
 
 # ------------------------- 子处理器（模拟子代理） -------------------------
@@ -151,6 +190,8 @@ def main() -> None:
     # 如果模型初始化失败（例如没有配置 GOOGLE_API_KEY、网络问题、模型名错误），
     # 则直接退出，避免后续 coordinator_agent.invoke 抛出连锁异常。
     if not llm:
+        if llm_status:
+            print(f"LLM status: {llm_status}")
         print("\nSkipping execution due to LLM initialization failure.")
         return
 

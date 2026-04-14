@@ -1,8 +1,10 @@
 langchain
+langchain-openai
 langgraph
 google-cloud-aiplatform
 langchain-google-genai
 google-adk
+litellm
 deprecated
 pydantic
 python-dotenv
