@@ -33,13 +33,13 @@
 本项目当前指定环境：
 
 ```bash
-/Users/yz/work/env/adp/.venv/bin/python -V
+.venv/bin/python -V
 ```
 
 安装依赖：
 
 ```bash
-/Users/yz/work/env/adp/.venv/bin/pip install -r /Users/yz/work/github/adp/recovery_12/requirements.txt
+.venv/bin/pip install -r /Users/yz/work/github/adp/recovery_12/requirements.txt
 ```
 
 ## Python 依赖清单
@@ -70,7 +70,7 @@ GOOGLE_MODEL=gemini-2.5-flash
 
 ```bash
 cd /Users/yz/work/github/adp/recovery_12
-/Users/yz/work/env/adp/.venv/bin/python main.py
+.venv/bin/python main.py
 ```
 
 运行后输入地址，例如：`不存在的地址`。
@@ -81,7 +81,7 @@ cd /Users/yz/work/github/adp/recovery_12
 
 ```text
 python main.py
-/Users/yz/work/env/adp/.venv/lib/python3.12/site-packages/google/adk/features/_feature_decorator.py:72: UserWarning: [EXPERIMENTAL] feature FeatureName.PLUGGABLE_AUTH is enabled.
+.venv/lib/python3.12/site-packages/google/adk/features/_feature_decorator.py:72: UserWarning: [EXPERIMENTAL] feature FeatureName.PLUGGABLE_AUTH is enabled.
   check_feature_enabled()
 模型后端：OpenAI-compatible（固定） -> openai/qwen3-coder-plus
 请输入要查询的地址：不存在的地址

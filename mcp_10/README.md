@@ -32,13 +32,13 @@
 本仓库当前已使用隔离虚拟环境（推荐）：
 
 ```bash
-/Users/yz/work/env/adp/.venv_mcp_10/bin/python -V
+.venv/bin/python -V
 ```
 
 若需安装依赖：
 
 ```bash
-/Users/yz/work/env/adp/.venv_mcp_10/bin/pip install -r /Users/yz/work/github/adp/mcp_10/requirements.txt
+.venv/bin/pip install -r /Users/yz/work/github/adp/mcp_10/requirements.txt
 ```
 
 ## Python 依赖清单
@@ -79,14 +79,14 @@ MCP_SERVER_URL=http://127.0.0.1:8000/mcp
 
 ```bash
 cd /Users/yz/work/github/adp/mcp_10
-/Users/yz/work/env/adp/.venv_mcp_10/bin/python fastmcp_server.py
+.venv/bin/python fastmcp_server.py
 ```
 
 2. 终端 B：启动交互式智能体
 
 ```bash
 cd /Users/yz/work/github/adp/mcp_10
-/Users/yz/work/env/adp/.venv_mcp_10/bin/python main.py
+.venv/bin/python main.py
 ```
 
 3. 在智能体终端输入问题，示例：

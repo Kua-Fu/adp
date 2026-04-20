@@ -30,13 +30,13 @@
 本项目当前指定环境：
 
 ```bash
-/Users/yz/work/env/adp/.venv/bin/python -V
+.venv/bin/python -V
 ```
 
 安装依赖：
 
 ```bash
-/Users/yz/work/env/adp/.venv/bin/pip install -r /Users/yz/work/github/adp/goal_11/requirements.txt
+.venv/bin/pip install -r /Users/yz/work/github/adp/goal_11/requirements.txt
 ```
 
 ## Python 依赖清单
@@ -79,14 +79,14 @@ cd /Users/yz/work/github/adp/goal_11
 GOAL_PROMPT='写一个 7 天学习 Python 的可执行计划。' \
 GOAL_MAX_ROUNDS=2 \
 GOAL_TARGET_SCORE=8 \
-/Users/yz/work/env/adp/.venv/bin/python main.py
+.venv/bin/python main.py
 ```
 
 ### 方式 2：交互模式
 
 ```bash
 cd /Users/yz/work/github/adp/goal_11
-/Users/yz/work/env/adp/.venv/bin/python main.py
+.venv/bin/python main.py
 ```
 
 进入后输入目标即可，输入 `exit` / `quit` / `q` 退出。

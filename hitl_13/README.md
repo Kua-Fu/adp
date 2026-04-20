@@ -29,13 +29,13 @@
 本项目当前指定环境：
 
 ```bash
-/Users/yz/work/env/adp/.venv/bin/python -V
+.venv/bin/python -V
 ```
 
 安装依赖：
 
 ```bash
-/Users/yz/work/env/adp/.venv/bin/pip install -r /Users/yz/work/github/adp/hitl_13/requirements.txt
+.venv/bin/pip install -r /Users/yz/work/github/adp/hitl_13/requirements.txt
 ```
 
 ## Python 依赖清单
@@ -66,7 +66,7 @@ GOOGLE_MODEL=gemini-2.5-flash
 
 ```bash
 cd /Users/yz/work/github/adp/hitl_13
-/Users/yz/work/env/adp/.venv/bin/python main.py
+.venv/bin/python main.py
 ```
 
 ## 实际运行输出（main.py）
@@ -75,7 +75,7 @@ cd /Users/yz/work/github/adp/hitl_13
 
 ```text
 python main.py
-/Users/yz/work/env/adp/.venv/lib/python3.12/site-packages/google/adk/features/_feature_decorator.py:72: UserWarning: [EXPERIMENTAL] feature FeatureName.PLUGGABLE_AUTH is enabled.
+.venv/lib/python3.12/site-packages/google/adk/features/_feature_decorator.py:72: UserWarning: [EXPERIMENTAL] feature FeatureName.PLUGGABLE_AUTH is enabled.
   check_feature_enabled()
 模型后端：OpenAI-compatible（优先） -> openai/qwen3-coder-plus
 请输入你遇到的技术问题：gpt 是如何构造的呢
@@ -91,7 +91,7 @@ python main.py
 请问您是否有关于Smart TV X1或Soundbar Pro的技术问题需要解决呢？
 
 python main.py
-/Users/yz/work/env/adp/.venv/lib/python3.12/site-packages/google/adk/features/_feature_decorator.py:72: UserWarning: [EXPERIMENTAL] feature FeatureName.PLUGGABLE_AUTH is enabled.
+.venv/lib/python3.12/site-packages/google/adk/features/_feature_decorator.py:72: UserWarning: [EXPERIMENTAL] feature FeatureName.PLUGGABLE_AUTH is enabled.
   check_feature_enabled()
 模型后端：OpenAI-compatible（优先） -> openai/qwen3-coder-plus
 请输入你遇到的技术问题：Soundbar Pro产品不能使用了

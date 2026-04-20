@@ -29,13 +29,13 @@
 项目当前使用的 Python 环境：
 
 ```bash
-/Users/yz/work/env/adp/.venv/bin/python -V
+.venv/bin/python -V
 ```
 
 安装依赖：
 
 ```bash
-/Users/yz/work/env/adp/.venv/bin/pip install -r /Users/yz/work/github/adp/rag_14/requirements.txt
+.venv/bin/pip install -r /Users/yz/work/github/adp/rag_14/requirements.txt
 ```
 
 ## requirements 说明
@@ -86,7 +86,7 @@ cd /Users/yz/work/github/adp/rag_14
 4. 运行程序：
 
 ```bash
-/Users/yz/work/env/adp/.venv/bin/python main.py
+.venv/bin/python main.py
 ```
 
 5. 程序执行顺序：

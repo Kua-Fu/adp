@@ -33,7 +33,7 @@ python -m pip install -r requirements.txt
 如果你复用统一环境（本仓库当前做法）：
 
 ```bash
-/Users/yz/work/env/adp/.venv/bin/pip install -r /Users/yz/work/github/adp/mm_8/requirements.txt
+.venv/bin/pip install -r /Users/yz/work/github/adp/mm_8/requirements.txt
 ```
 
 ## Python 依赖清单
@@ -80,7 +80,7 @@ MM_USER_ID=user-001
 
 ```bash
 cd /Users/yz/work/github/adp/mm_8
-/Users/yz/work/env/adp/.venv/bin/python main.py
+.venv/bin/python main.py
 ```
 
 运行结果（本地实测，2026-04-15）：
