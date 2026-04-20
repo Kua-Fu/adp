@@ -205,3 +205,7 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Weaviate Embedded runtime artifacts
+.weaviate_bin/
+.weaviate_data/
