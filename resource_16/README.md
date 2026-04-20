@@ -16,6 +16,7 @@
 ## 模块文件说明
 
 - `main.py`：主程序（环境加载、分类、检索、回答生成、交互循环）。
+- `requirements.txt`：本模块 Python 依赖清单。
 - `.env`：模型与检索配置。
 
 ## 环境与安装
@@ -31,7 +32,7 @@
 安装依赖（如未安装）：
 
 ```bash
-.venv/bin/pip install python-dotenv requests openai google-generativeai
+.venv/bin/pip install -r adp/resource_16/requirements.txt
 ```
 
 ## `.env` 配置说明
