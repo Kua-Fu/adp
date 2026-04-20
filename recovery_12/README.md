@@ -39,7 +39,7 @@
 安装依赖：
 
 ```bash
-.venv/bin/pip install -r /Users/yz/work/github/adp/recovery_12/requirements.txt
+.venv/bin/pip install -r adp/recovery_12/requirements.txt
 ```
 
 ## Python 依赖清单
@@ -69,7 +69,7 @@ GOOGLE_MODEL=gemini-2.5-flash
 ## 运行方式
 
 ```bash
-cd /Users/yz/work/github/adp/recovery_12
+cd adp/recovery_12
 .venv/bin/python main.py
 ```
 

@@ -25,7 +25,7 @@
 创建环境（推荐）：
 
 ```bash
-cd /Users/yz/work/github/adp/reflection_4
+cd adp/reflection_4
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
@@ -90,7 +90,7 @@ REFLECTION_MAX_ITERATIONS=3
 ## （1）运行 `main.py`
 
 ```bash
-cd /Users/yz/work/github/adp/reflection_4
+cd adp/reflection_4
 source .venv/bin/activate
 python main.py
 ```

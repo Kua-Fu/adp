@@ -29,7 +29,7 @@
 安装方式：
 
 ```bash
-cd /Users/yz/work/github/adp/promptChaining_1
+cd adp/promptChaining_1
 source .venv/bin/activate
 pip install -r requirements.txt
 ```
@@ -58,7 +58,7 @@ OPENAI_TEMPERATURE=0
 ## 运行方式
 
 ```bash
-cd /Users/yz/work/github/adp/promptChaining_1
+cd adp/promptChaining_1
 source .venv/bin/activate
 python main.py
 ```

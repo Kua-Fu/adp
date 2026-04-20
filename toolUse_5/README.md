@@ -24,7 +24,7 @@
 推荐安装：
 
 ```bash
-cd /Users/yz/work/github/adp/toolUse_5
+cd adp/toolUse_5
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
@@ -73,7 +73,7 @@ GOOGLE_TEMPERATURE=0
 ## （1）运行 `main.py`
 
 ```bash
-cd /Users/yz/work/github/adp/toolUse_5
+cd adp/toolUse_5
 python main.py
 ```
 
@@ -107,7 +107,7 @@ Dogs are one of the most popular pets worldwide and are known for their loyalty,
 ## （2）运行 `main_crew_ai.py`
 
 ```bash
-cd /Users/yz/work/github/adp/toolUse_5
+cd adp/toolUse_5
 python main_crew_ai.py
 ```
 

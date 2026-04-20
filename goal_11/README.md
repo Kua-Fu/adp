@@ -36,7 +36,7 @@
 安装依赖：
 
 ```bash
-.venv/bin/pip install -r /Users/yz/work/github/adp/goal_11/requirements.txt
+.venv/bin/pip install -r adp/goal_11/requirements.txt
 ```
 
 ## Python 依赖清单
@@ -75,7 +75,7 @@ GOAL_TARGET_SCORE=8
 ### 方式 1：单次模式（推荐）
 
 ```bash
-cd /Users/yz/work/github/adp/goal_11
+cd adp/goal_11
 GOAL_PROMPT='写一个 7 天学习 Python 的可执行计划。' \
 GOAL_MAX_ROUNDS=2 \
 GOAL_TARGET_SCORE=8 \
@@ -85,7 +85,7 @@ GOAL_TARGET_SCORE=8 \
 ### 方式 2：交互模式
 
 ```bash
-cd /Users/yz/work/github/adp/goal_11
+cd adp/goal_11
 .venv/bin/python main.py
 ```
 

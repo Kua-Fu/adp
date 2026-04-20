@@ -26,7 +26,7 @@
 创建环境：
 
 ```bash
-cd /Users/yz/work/github/adp/parallelization_3
+cd adp/parallelization_3
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
@@ -94,7 +94,7 @@ GOOGLE_TEMPERATURE=0.7
 ## （1）运行 `main.py`
 
 ```bash
-cd /Users/yz/work/github/adp/parallelization_3
+cd adp/parallelization_3
 source .venv/bin/activate
 python main.py
 ```
@@ -114,7 +114,7 @@ Language model initialized. Using OpenAI-compatible backend: qwen3-coder-plus
 ## （2）运行 `main_google_adk.py`
 
 ```bash
-cd /Users/yz/work/github/adp/parallelization_3
+cd adp/parallelization_3
 source .venv/bin/activate
 python main_google_adk.py
 ```

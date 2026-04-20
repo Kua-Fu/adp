@@ -23,7 +23,7 @@
 安装方式：
 
 ```bash
-cd /Users/yz/work/github/adp/planning_6
+cd adp/planning_6
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
@@ -56,7 +56,7 @@ GOOGLE_TEMPERATURE=0
 ## 运行 main.py
 
 ```bash
-cd /Users/yz/work/github/adp/planning_6
+cd adp/planning_6
 python main.py
 ```
 

@@ -24,7 +24,7 @@
 推荐安装：
 
 ```bash
-cd /Users/yz/work/github/adp/mm_8
+cd adp/mm_8
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
@@ -33,7 +33,7 @@ python -m pip install -r requirements.txt
 如果你复用统一环境（本仓库当前做法）：
 
 ```bash
-.venv/bin/pip install -r /Users/yz/work/github/adp/mm_8/requirements.txt
+.venv/bin/pip install -r adp/mm_8/requirements.txt
 ```
 
 ## Python 依赖清单
@@ -79,7 +79,7 @@ MM_USER_ID=user-001
 ## 运行 `main.py`
 
 ```bash
-cd /Users/yz/work/github/adp/mm_8
+cd adp/mm_8
 .venv/bin/python main.py
 ```
 

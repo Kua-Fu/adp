@@ -38,7 +38,7 @@
 若需安装依赖：
 
 ```bash
-.venv/bin/pip install -r /Users/yz/work/github/adp/mcp_10/requirements.txt
+.venv/bin/pip install -r adp/mcp_10/requirements.txt
 ```
 
 ## Python 依赖清单
@@ -78,14 +78,14 @@ MCP_SERVER_URL=http://127.0.0.1:8000/mcp
 1. 终端 A：启动 MCP Server
 
 ```bash
-cd /Users/yz/work/github/adp/mcp_10
+cd adp/mcp_10
 .venv/bin/python fastmcp_server.py
 ```
 
 2. 终端 B：启动交互式智能体
 
 ```bash
-cd /Users/yz/work/github/adp/mcp_10
+cd adp/mcp_10
 .venv/bin/python main.py
 ```
 

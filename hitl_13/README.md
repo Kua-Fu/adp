@@ -35,7 +35,7 @@
 安装依赖：
 
 ```bash
-.venv/bin/pip install -r /Users/yz/work/github/adp/hitl_13/requirements.txt
+.venv/bin/pip install -r adp/hitl_13/requirements.txt
 ```
 
 ## Python 依赖清单
@@ -65,7 +65,7 @@ GOOGLE_MODEL=gemini-2.5-flash
 ## 运行方式
 
 ```bash
-cd /Users/yz/work/github/adp/hitl_13
+cd adp/hitl_13
 .venv/bin/python main.py
 ```
 

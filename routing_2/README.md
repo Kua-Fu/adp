@@ -25,7 +25,7 @@
 从零创建环境（推荐）：
 
 ```bash
-cd /Users/yz/work/github/adp/routing_2
+cd adp/routing_2
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
@@ -96,7 +96,7 @@ GOOGLE_MODEL=gemini-2.5-flash
 推荐：先跑这个版本确认模型与环境配置正确，再切换到 ADK 版本。
 
 ```bash
-cd /Users/yz/work/github/adp/routing_2
+cd adp/routing_2
 source .venv/bin/activate
 python main.py
 ```
@@ -127,7 +127,7 @@ Final Result C: Info handler processed request: 'Tell me about quantum physics.'
 推荐：当 `main.py` 验证通过后，再用这个版本接入更真实的代理协作流程。
 
 ```bash
-cd /Users/yz/work/github/adp/routing_2
+cd adp/routing_2
 source .venv/bin/activate
 python main_google_adk.py
 ```

@@ -35,7 +35,7 @@
 安装依赖：
 
 ```bash
-.venv/bin/pip install -r /Users/yz/work/github/adp/rag_14/requirements.txt
+.venv/bin/pip install -r adp/rag_14/requirements.txt
 ```
 
 ## requirements 说明
@@ -76,7 +76,7 @@ GOOGLE_EMBEDDING_MODEL=models/text-embedding-004
 1. 进入模块目录：
 
 ```bash
-cd /Users/yz/work/github/adp/rag_14
+cd adp/rag_14
 ```
 
 2. 确认 `state_of_the_union.txt` 存在。
